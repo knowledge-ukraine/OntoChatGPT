@@ -1,0 +1,1469 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-50 "http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#"
+     xml:base="http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:untitled-ontology-50="http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#has_field_type -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-50;has_field_type">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&untitled-ontology-50;fields_types"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-50;input_fields"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#has_input_field -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-50;has_input_field">
+        <rdfs:range rdf:resource="&untitled-ontology-50;input_fields"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-50;tasks"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#has_instructios -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-50;has_instructios">
+        <rdfs:range rdf:resource="&untitled-ontology-50;instruction_fields"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-50;tasks"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#has_output -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-50;has_output">
+        <rdfs:range rdf:resource="&untitled-ontology-50;output_representation_templates"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-50;tasks"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#has_output_field -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-50;has_output_field">
+        <rdfs:domain rdf:resource="&untitled-ontology-50;output_representation_templates"/>
+        <rdfs:range rdf:resource="&untitled-ontology-50;results_fields"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#possible_values -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-50;possible_values">
+        <rdfs:range rdf:resource="&untitled-ontology-50;intents"/>
+        <rdfs:range rdf:resource="&untitled-ontology-50;prompt_phrases"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-50;template_fields"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#relate_to_intent -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-50;relate_to_intent">
+        <rdfs:range rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-50;has_output"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-50;representative_info_templates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#relate_to_language -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-50;relate_to_language">
+        <rdfs:domain rdf:resource="&untitled-ontology-50;intents"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-50;prompt_phrases"/>
+        <rdfs:range rdf:resource="&untitled-ontology-50;text_languages"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#relate_to_output -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-50;relate_to_output">
+        <rdfs:domain rdf:resource="&untitled-ontology-50;general_intentions"/>
+        <rdfs:range rdf:resource="&untitled-ontology-50;output_representation_templates"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-50;prompt_phrases"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#relate_to_task -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-50;relate_to_task">
+        <rdfs:domain rdf:resource="&untitled-ontology-50;intents"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-50;prompt_phrases"/>
+        <rdfs:range rdf:resource="&untitled-ontology-50;tasks"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#tasks_order -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-50;tasks_order">
+        <rdfs:domain rdf:resource="&untitled-ontology-50;tasks"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#boolean_values -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;boolean_values">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;values_prompts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#certain_intents -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;certain_intents">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;intents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#fields_types -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;fields_types"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#formats -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;formats">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;prompt_phrases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#general_intentions -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;general_intentions">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;intents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#input_fields -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;input_fields">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;template_fields"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#instruction_fields -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;instruction_fields">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;template_fields"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#intents -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;intents"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#languages_prompts -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;languages_prompts">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;prompt_phrases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#numbers -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;numbers">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;values_prompts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#output_representation_templates -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;output_representation_templates">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;template_fields"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#prompt_phrases -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;prompt_phrases"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#provide_info_prompts -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;provide_info_prompts">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;prompt_phrases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#relult_arrangments -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;relult_arrangments">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;prompt_phrases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#representative_info_templates -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;representative_info_templates">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;output_representation_templates"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#results_fields -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;results_fields">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;template_fields"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#results_prompts -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;results_prompts">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;prompt_phrases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#tasks -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;tasks"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#template_fields -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;template_fields"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#text_languages -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;text_languages"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#values_prompts -->
+
+    <owl:Class rdf:about="&untitled-ontology-50;values_prompts">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-50;prompt_phrases"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#JSON_format -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;JSON_format">
+        <rdf:type rdf:resource="&untitled-ontology-50;formats"/>
+        <rdfs:label xml:lang="en">JSON format</rdfs:label>
+        <rdfs:comment xml:lang="en">JSON</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#XML_format -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;XML_format">
+        <rdf:type rdf:resource="&untitled-ontology-50;formats"/>
+        <rdfs:label xml:lang="en">XML format</rdfs:label>
+        <rdfs:comment xml:lang="en">XML</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#action_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;action_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">action intent</rdfs:label>
+        <rdfs:comment xml:lang="en">action</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#boolean_ft -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;boolean_ft">
+        <rdf:type rdf:resource="&untitled-ontology-50;fields_types"/>
+        <rdfs:label xml:lang="en">boolean field type</rdfs:label>
+        <rdfs:comment xml:lang="en">boolean</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#by_probability_arr -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;by_probability_arr">
+        <rdf:type rdf:resource="&untitled-ontology-50;relult_arrangments"/>
+        <rdfs:comment xml:lang="en">by probability</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#by_type_arr -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;by_type_arr">
+        <rdf:type rdf:resource="&untitled-ontology-50;relult_arrangments"/>
+        <rdfs:comment xml:lang="en">by type</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#cause_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;cause_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">cause intent</rdfs:label>
+        <rdfs:comment xml:lang="en">cause</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#collaborator_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;collaborator_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">collaborator intent</rdfs:label>
+        <rdfs:comment xml:lang="en">collaborator</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#conditions_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;conditions_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">conditions intent</rdfs:label>
+        <rdfs:comment xml:lang="en">conditions</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#contexts_inp_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;contexts_inp_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;input_fields"/>
+        <rdfs:comment xml:lang="en">contexts</rdfs:comment>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_task rdf:resource="&untitled-ontology-50;find_information_in_contexts_task"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;list_of_texts_ft"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#def_nouns_and_name_groups_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;def_nouns_and_name_groups_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;provide_info_prompts"/>
+        <rdfs:comment xml:lang="en">nouns and name groups</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_name_groups_task"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#def_verbs_and_verb_groups_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;def_verbs_and_verb_groups_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;provide_info_prompts"/>
+        <rdfs:comment xml:lang="en">verbs and verb groups</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_name_groups_task"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#define_intents_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;define_intents_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;provide_info_prompts"/>
+        <rdfs:comment xml:lang="en">define intents</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#define_intents_tsak -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;define_intents_tsak">
+        <rdf:type rdf:resource="&untitled-ontology-50;tasks"/>
+        <rdfs:label xml:lang="en">define intents tsak</rdfs:label>
+        <tasks_order>1</tasks_order>
+        <has_instructios rdf:resource="&untitled-ontology-50;information_to_provide_inst_f"/>
+        <has_input_field rdf:resource="&untitled-ontology-50;input_information_field_inp_f"/>
+        <has_instructios rdf:resource="&untitled-ontology-50;input_information_field_inst_f"/>
+        <has_input_field rdf:resource="&untitled-ontology-50;intents_arrange_inp_f"/>
+        <has_instructios rdf:resource="&untitled-ontology-50;language_inst_f"/>
+        <has_input_field rdf:resource="&untitled-ontology-50;max_intents_number_inp_f"/>
+        <has_input_field rdf:resource="&untitled-ontology-50;output_format_inp_f"/>
+        <has_instructios rdf:resource="&untitled-ontology-50;possible_intents_inst_f"/>
+        <has_input_field rdf:resource="&untitled-ontology-50;several_intents_inp_f"/>
+        <has_input_field rdf:resource="&untitled-ontology-50;show_intent_subject_inp_f"/>
+        <has_output rdf:resource="&untitled-ontology-50;show_intents_rep_template"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#define_name_groups_task -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;define_name_groups_task">
+        <rdf:type rdf:resource="&untitled-ontology-50;tasks"/>
+        <rdfs:label xml:lang="en">define name groups task</rdfs:label>
+        <tasks_order>2</tasks_order>
+        <has_instructios rdf:resource="&untitled-ontology-50;information_to_provide_inst_f"/>
+        <has_instructios rdf:resource="&untitled-ontology-50;input_information_field_inst_f"/>
+        <has_instructios rdf:resource="&untitled-ontology-50;language_inst_f"/>
+        <has_input_field rdf:resource="&untitled-ontology-50;output_format_inp_f"/>
+        <has_output rdf:resource="&untitled-ontology-50;show_name_groups_rep_template"/>
+        <has_input_field rdf:resource="&untitled-ontology-50;text_inp_f"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#direction_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;direction_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">direction intent</rdfs:label>
+        <rdfs:comment xml:lang="en">direction</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#english_lang_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;english_lang_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;languages_prompts"/>
+        <rdfs:comment xml:lang="en">English</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_name_groups_task"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_task rdf:resource="&untitled-ontology-50;find_information_in_contexts_task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#english_language -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;english_language">
+        <rdf:type rdf:resource="&untitled-ontology-50;text_languages"/>
+        <rdfs:label xml:lang="en">english language</rdfs:label>
+        <rdfs:comment xml:lang="en">English</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#false_bv -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;false_bv">
+        <rdf:type rdf:resource="&untitled-ontology-50;boolean_values"/>
+        <rdfs:label xml:lang="en">false boolean value</rdfs:label>
+        <rdfs:comment xml:lang="en">false</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#find_information_in_contexts_task -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;find_information_in_contexts_task">
+        <rdf:type rdf:resource="&untitled-ontology-50;tasks"/>
+        <rdfs:label xml:lang="en">find information in contexts task</rdfs:label>
+        <tasks_order>3</tasks_order>
+        <rdfs:comment xml:lang="en">find information in contexts task</rdfs:comment>
+        <has_input_field rdf:resource="&untitled-ontology-50;contexts_inp_f"/>
+        <has_output rdf:resource="&untitled-ontology-50;general_info_rep_template"/>
+        <has_instructios rdf:resource="&untitled-ontology-50;information_to_provide_inst_f"/>
+        <has_instructios rdf:resource="&untitled-ontology-50;input_information_field_inst_f"/>
+        <has_input_field rdf:resource="&untitled-ontology-50;intents_inp_f"/>
+        <has_instructios rdf:resource="&untitled-ontology-50;language_inst_f"/>
+        <has_output rdf:resource="&untitled-ontology-50;origin_info_rep_template"/>
+        <has_input_field rdf:resource="&untitled-ontology-50;output_format_inp_f"/>
+        <has_instructios rdf:resource="&untitled-ontology-50;output_keys_language_inst_f"/>
+        <has_output rdf:resource="&untitled-ontology-50;quantity_info_rep_template"/>
+        <has_output rdf:resource="&untitled-ontology-50;subject_info_rep_template"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#find_objects_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;find_objects_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;provide_info_prompts"/>
+        <rdfs:comment xml:lang="en">find objects</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#find_subjects_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;find_subjects_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;provide_info_prompts"/>
+        <rdfs:comment xml:lang="en">find subjects</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#float_value -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;float_value">
+        <rdf:type rdf:resource="&untitled-ontology-50;numbers"/>
+        <rdfs:label xml:lang="en">float value prompt</rdfs:label>
+        <rdfs:comment xml:lang="en">float value</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;show_intents_rep_template"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;show_intents_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#general_info_rep_template -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;general_info_rep_template">
+        <rdf:type rdf:resource="&untitled-ontology-50;representative_info_templates"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;action_intent"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;cause_intent"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;collaborator_intent"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;conditions_intent"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;direction_intent"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;instrument_intent"/>
+        <has_output_field rdf:resource="&untitled-ontology-50;intent_res_f"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;json_field_ft"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;location_intent"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;object_intent"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;place_intent"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;relation_intent"/>
+        <has_output_field rdf:resource="&untitled-ontology-50;results_res_f"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;sequence_intent"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;way_of_doing_intent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#general_results_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;general_results_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_prompts"/>
+        <rdfs:comment xml:lang="en">text or an appropriate data structure or None</rdfs:comment>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_task rdf:resource="&untitled-ontology-50;find_information_in_contexts_task"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;general_info_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#imperative_g_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;imperative_g_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;general_intentions"/>
+        <rdfs:label xml:lang="en">imperative general intent</rdfs:label>
+        <rdfs:comment xml:lang="en">imperative</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;show_intents_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#information_to_provide_inst_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;information_to_provide_inst_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;instruction_fields"/>
+        <rdfs:comment xml:lang="en">information to provide</rdfs:comment>
+        <possible_values rdf:resource="&untitled-ontology-50;def_nouns_and_name_groups_pf"/>
+        <possible_values rdf:resource="&untitled-ontology-50;def_verbs_and_verb_groups_pf"/>
+        <possible_values rdf:resource="&untitled-ontology-50;define_intents_pf"/>
+        <possible_values rdf:resource="&untitled-ontology-50;find_objects_pf"/>
+        <possible_values rdf:resource="&untitled-ontology-50;find_subjects_pf"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;list_of_texts_ft"/>
+        <possible_values rdf:resource="&untitled-ontology-50;provide_answer_from_contexts_and_intents_pf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#input_information_field_inp_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;input_information_field_inp_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;input_fields"/>
+        <rdfs:comment xml:lang="en">input information</rdfs:comment>
+        <has_field_type rdf:resource="&untitled-ontology-50;text_field_ft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#input_information_field_inst_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;input_information_field_inst_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;instruction_fields"/>
+        <rdfs:comment xml:lang="en">input information field</rdfs:comment>
+        <possible_values rdf:resource="&untitled-ontology-50;contexts_inp_f"/>
+        <possible_values rdf:resource="&untitled-ontology-50;intents_inp_f"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;list_of_texts_ft"/>
+        <possible_values rdf:resource="&untitled-ontology-50;text_inp_f"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#instrument_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;instrument_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">instrument intent</rdfs:label>
+        <rdfs:comment xml:lang="en">instrument</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;english_language"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;russian_language"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#intent_res_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;intent_res_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_fields"/>
+        <rdfs:comment xml:lang="en">intent</rdfs:comment>
+        <possible_values rdf:resource="&untitled-ontology-50;intent_result_pf"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;text_field_ft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#intent_result_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;intent_result_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_prompts"/>
+        <rdfs:comment xml:lang="en">intent name - string</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_task rdf:resource="&untitled-ontology-50;find_information_in_contexts_task"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;float_value"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;general_info_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;show_intents_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#intents_arrange_inp_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;intents_arrange_inp_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;input_fields"/>
+        <rdfs:comment xml:lang="en">intents arrange</rdfs:comment>
+        <possible_values rdf:resource="&untitled-ontology-50;by_probability_arr"/>
+        <possible_values rdf:resource="&untitled-ontology-50;by_type_arr"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;text_field_ft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#intents_inp_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;intents_inp_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;input_fields"/>
+        <rdfs:comment xml:lang="en">intents</rdfs:comment>
+        <has_field_type rdf:resource="&untitled-ontology-50;json_field_ft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#intents_probability_ft -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;intents_probability_ft">
+        <rdf:type rdf:resource="&untitled-ontology-50;fields_types"/>
+        <rdfs:label xml:lang="en">intents probability field type</rdfs:label>
+        <rdfs:comment xml:lang="en">intents probability</rdfs:comment>
+        <has_field_type rdf:resource="&untitled-ontology-50;boolean_ft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#interrogation_g_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;interrogation_g_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;general_intentions"/>
+        <rdfs:label xml:lang="en">interrogation general intent</rdfs:label>
+        <rdfs:comment xml:lang="en">interrogation</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;show_intents_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#json_field_ft -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;json_field_ft">
+        <rdf:type rdf:resource="&untitled-ontology-50;fields_types"/>
+        <rdfs:label xml:lang="en">json field field type</rdfs:label>
+        <rdfs:comment xml:lang="en">json field</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#language_inst_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;language_inst_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;instruction_fields"/>
+        <rdfs:comment xml:lang="en">language</rdfs:comment>
+        <possible_values rdf:resource="&untitled-ontology-50;english_lang_pf"/>
+        <possible_values rdf:resource="&untitled-ontology-50;russian_lang_pf"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;text_field_ft"/>
+        <possible_values rdf:resource="&untitled-ontology-50;ukrainian_lang_pf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#list_of_numbers_ft -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;list_of_numbers_ft">
+        <rdf:type rdf:resource="&untitled-ontology-50;fields_types"/>
+        <rdfs:label xml:lang="en">list of numbers field type</rdfs:label>
+        <rdfs:comment xml:lang="en">list of numbers</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#list_of_texts_ft -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;list_of_texts_ft">
+        <rdf:type rdf:resource="&untitled-ontology-50;fields_types"/>
+        <rdfs:label xml:lang="en">list of texts field type</rdfs:label>
+        <rdfs:comment xml:lang="en">list of texts</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#location_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;location_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">location intent</rdfs:label>
+        <rdfs:comment xml:lang="en">location</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <owl:sameAs rdf:resource="&untitled-ontology-50;place_intent"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#main_word_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;main_word_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_prompts"/>
+        <rdfs:comment xml:lang="en">main word of the group, and if it is one word it will be main</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_name_groups_task"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;show_name_groups_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#main_word_res_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;main_word_res_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_fields"/>
+        <rdfs:comment xml:lang="en">main word</rdfs:comment>
+        <possible_values rdf:resource="&untitled-ontology-50;main_word_pf"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;text_field_ft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#max_intents_number_inp_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;max_intents_number_inp_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;input_fields"/>
+        <rdfs:comment xml:lang="en">max intents number</rdfs:comment>
+        <has_field_type rdf:resource="&untitled-ontology-50;number_ft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#narration_g_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;narration_g_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;general_intentions"/>
+        <rdfs:label xml:lang="en">narration general intent</rdfs:label>
+        <rdfs:comment xml:lang="en">narration</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;show_intents_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#noun_or_verb_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;noun_or_verb_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_prompts"/>
+        <rdfs:comment xml:lang="en">noun or verb</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_name_groups_task"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;show_name_groups_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#nouns_and_name_groups_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;nouns_and_name_groups_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;provide_info_prompts"/>
+        <rdfs:comment xml:lang="en">nouns and name groups</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_name_groups_task"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#number_ft -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;number_ft">
+        <rdf:type rdf:resource="&untitled-ontology-50;fields_types"/>
+        <rdfs:label xml:lang="en">numberr field type</rdfs:label>
+        <rdfs:comment xml:lang="en">number</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#object_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;object_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">object intent</rdfs:label>
+        <rdfs:comment xml:lang="en">object</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#object_res_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;object_res_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_fields"/>
+        <rdfs:comment xml:lang="en">object</rdfs:comment>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <possible_values rdf:resource="&untitled-ontology-50;object_result_pf"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;text_field_ft"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#object_result_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;object_result_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_prompts"/>
+        <rdfs:comment xml:lang="en">object of the intent as a name or verb group - string</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;show_intents_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#origin_info_rep_template -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;origin_info_rep_template">
+        <rdf:type rdf:resource="&untitled-ontology-50;representative_info_templates"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;origin_intent"/>
+        <has_output_field rdf:resource="&untitled-ontology-50;results_res_f"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#origin_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;origin_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">origin intent</rdfs:label>
+        <rdfs:comment xml:lang="en">origin</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#origin_results_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;origin_results_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_prompts"/>
+        <rdfs:comment xml:lang="en">text or an appropriate data structure to present information about origin or None</rdfs:comment>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_task rdf:resource="&untitled-ontology-50;find_information_in_contexts_task"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;origin_info_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#output_format_inp_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;output_format_inp_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;input_fields"/>
+        <rdfs:comment xml:lang="en">output format</rdfs:comment>
+        <possible_values rdf:resource="&untitled-ontology-50;JSON_format"/>
+        <possible_values rdf:resource="&untitled-ontology-50;XML_format"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;text_field_ft"/>
+        <possible_values rdf:resource="&untitled-ontology-50;text_field_ft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#output_keys_language_inst_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;output_keys_language_inst_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;instruction_fields"/>
+        <rdfs:comment xml:lang="en">output keys language</rdfs:comment>
+        <possible_values rdf:resource="&untitled-ontology-50;english_lang_pf"/>
+        <possible_values rdf:resource="&untitled-ontology-50;russian_lang_pf"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;text_field_ft"/>
+        <possible_values rdf:resource="&untitled-ontology-50;ukrainian_lang_pf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#place_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;place_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">place intent</rdfs:label>
+        <rdfs:comment xml:lang="en">place</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#possible_intents_inst_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;possible_intents_inst_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;instruction_fields"/>
+        <rdfs:comment xml:lang="en">possible intents</rdfs:comment>
+        <possible_values rdf:resource="&untitled-ontology-50;action_intent"/>
+        <possible_values rdf:resource="&untitled-ontology-50;cause_intent"/>
+        <possible_values rdf:resource="&untitled-ontology-50;collaborator_intent"/>
+        <possible_values rdf:resource="&untitled-ontology-50;conditions_intent"/>
+        <possible_values rdf:resource="&untitled-ontology-50;direction_intent"/>
+        <possible_values rdf:resource="&untitled-ontology-50;instrument_intent"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;list_of_texts_ft"/>
+        <possible_values rdf:resource="&untitled-ontology-50;location_intent"/>
+        <possible_values rdf:resource="&untitled-ontology-50;object_intent"/>
+        <possible_values rdf:resource="&untitled-ontology-50;place_intent"/>
+        <possible_values rdf:resource="&untitled-ontology-50;relation_intent"/>
+        <possible_values rdf:resource="&untitled-ontology-50;sequence_intent"/>
+        <possible_values rdf:resource="&untitled-ontology-50;subject_intent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#probability_res_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;probability_res_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_fields"/>
+        <rdfs:comment xml:lang="en">probability</rdfs:comment>
+        <possible_values rdf:resource="&untitled-ontology-50;float_value"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;text_field_ft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#provide_answer_from_contexts_and_intents_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;provide_answer_from_contexts_and_intents_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;provide_info_prompts"/>
+        <rdfs:comment xml:lang="en">find relevant information make conclusions for the contexts according to the intents</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;find_information_in_contexts_task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#quantity_info_rep_template -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;quantity_info_rep_template">
+        <rdf:type rdf:resource="&untitled-ontology-50;representative_info_templates"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;quantity_intent"/>
+        <has_output_field rdf:resource="&untitled-ontology-50;results_res_f"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#quantity_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;quantity_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">quantity intent</rdfs:label>
+        <rdfs:comment xml:lang="en">quantity</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#quantity_results_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;quantity_results_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_prompts"/>
+        <rdfs:comment xml:lang="en">Number to show the quantity of the asked objects with the appropriate comment or None</rdfs:comment>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_task rdf:resource="&untitled-ontology-50;find_information_in_contexts_task"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;quantity_info_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#relation_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;relation_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">relation intent</rdfs:label>
+        <rdfs:comment xml:lang="en">relation</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#results_res_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;results_res_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_fields"/>
+        <rdfs:comment xml:lang="en">results</rdfs:comment>
+        <possible_values rdf:resource="&untitled-ontology-50;general_results_pf"/>
+        <possible_values rdf:resource="&untitled-ontology-50;object_result_pf"/>
+        <possible_values rdf:resource="&untitled-ontology-50;origin_results_pf"/>
+        <possible_values rdf:resource="&untitled-ontology-50;quantity_results_pf"/>
+        <possible_values rdf:resource="&untitled-ontology-50;subject_results_pf"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;text_field_ft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#russian_lang_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;russian_lang_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;languages_prompts"/>
+        <rdfs:comment xml:lang="en">Russian</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_name_groups_task"/>
+        <relate_to_task rdf:resource="&untitled-ontology-50;find_information_in_contexts_task"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#russian_language -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;russian_language">
+        <rdf:type rdf:resource="&untitled-ontology-50;text_languages"/>
+        <rdfs:label xml:lang="en">russian language</rdfs:label>
+        <rdfs:comment xml:lang="en">Russian</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#scene_of_action_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;scene_of_action_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">scene of action intent</rdfs:label>
+        <rdfs:comment xml:lang="en">scene of action</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#sequence_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;sequence_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">sequence intent</rdfs:label>
+        <rdfs:comment xml:lang="en">sequence</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#several_intents_inp_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;several_intents_inp_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;input_fields"/>
+        <rdfs:comment xml:lang="en">several intents</rdfs:comment>
+        <has_field_type rdf:resource="&untitled-ontology-50;boolean_ft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#show_intent_subject_inp_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;show_intent_subject_inp_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;input_fields"/>
+        <rdfs:comment xml:lang="en">show intent subject</rdfs:comment>
+        <has_field_type rdf:resource="&untitled-ontology-50;boolean_ft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#show_intents_rep_template -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;show_intents_rep_template">
+        <rdf:type rdf:resource="&untitled-ontology-50;output_representation_templates"/>
+        <has_output_field rdf:resource="&untitled-ontology-50;intent_res_f"/>
+        <has_output_field rdf:resource="&untitled-ontology-50;object_res_f"/>
+        <has_output_field rdf:resource="&untitled-ontology-50;probability_res_f"/>
+        <has_output_field rdf:resource="&untitled-ontology-50;subject_res_f"/>
+        <has_output_field rdf:resource="&untitled-ontology-50;type_res_f"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#show_name_groups_rep_template -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;show_name_groups_rep_template">
+        <rdf:type rdf:resource="&untitled-ontology-50;output_representation_templates"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;json_field_ft"/>
+        <has_output_field rdf:resource="&untitled-ontology-50;main_word_res_f"/>
+        <has_output_field rdf:resource="&untitled-ontology-50;type_res_f"/>
+        <has_output_field rdf:resource="&untitled-ontology-50;words_res_f"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#subject_info_rep_template -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;subject_info_rep_template">
+        <rdf:type rdf:resource="&untitled-ontology-50;representative_info_templates"/>
+        <has_output_field rdf:resource="&untitled-ontology-50;results_res_f"/>
+        <relate_to_intent rdf:resource="&untitled-ontology-50;subject_intent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#subject_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;subject_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">subject intent</rdfs:label>
+        <rdfs:comment xml:lang="en">subject</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#subject_res_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;subject_res_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_fields"/>
+        <rdfs:comment xml:lang="en">subject</rdfs:comment>
+        <possible_values rdf:resource="&untitled-ontology-50;show_intents_rep_template"/>
+        <possible_values rdf:resource="&untitled-ontology-50;subject_result_pf"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;text_field_ft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#subject_result_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;subject_result_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_prompts"/>
+        <rdfs:comment xml:lang="en">subject of the intent as a name group - string</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;show_intents_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#subject_results_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;subject_results_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_prompts"/>
+        <rdfs:comment xml:lang="en">text or an appropriate data structure focused on the subject or None</rdfs:comment>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_task rdf:resource="&untitled-ontology-50;find_information_in_contexts_task"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;subject_info_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#text_field_ft -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;text_field_ft">
+        <rdf:type rdf:resource="&untitled-ontology-50;fields_types"/>
+        <rdfs:label xml:lang="en">text field field type</rdfs:label>
+        <rdfs:comment xml:lang="en">text field</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#text_inp_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;text_inp_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;input_fields"/>
+        <rdfs:comment xml:lang="en">text</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_name_groups_task"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;text_field_ft"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#true_bv -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;true_bv">
+        <rdf:type rdf:resource="&untitled-ontology-50;boolean_values"/>
+        <rdfs:label xml:lang="en">true boolean value</rdfs:label>
+        <rdfs:comment xml:lang="en">true</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#type_res_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;type_res_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_fields"/>
+        <rdfs:comment xml:lang="en">type</rdfs:comment>
+        <possible_values rdf:resource="&untitled-ontology-50;imperative_g_intent"/>
+        <possible_values rdf:resource="&untitled-ontology-50;interrogation_g_intent"/>
+        <possible_values rdf:resource="&untitled-ontology-50;narration_g_intent"/>
+        <possible_values rdf:resource="&untitled-ontology-50;noun_or_verb_pf"/>
+        <has_field_type rdf:resource="&untitled-ontology-50;text_field_ft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#ukrainian_lang_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;ukrainian_lang_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;languages_prompts"/>
+        <rdfs:comment xml:lang="en">Ukrainian</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_name_groups_task"/>
+        <relate_to_task rdf:resource="&untitled-ontology-50;find_information_in_contexts_task"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#ukrainian_language -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;ukrainian_language">
+        <rdf:type rdf:resource="&untitled-ontology-50;text_languages"/>
+        <rdfs:label xml:lang="en">ukrainian language</rdfs:label>
+        <rdfs:comment xml:lang="en">Ukrainian</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#verbs_and_verb_groups_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;verbs_and_verb_groups_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;provide_info_prompts"/>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_name_groups_task"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#way_of_doing_intent -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;way_of_doing_intent">
+        <rdf:type rdf:resource="&untitled-ontology-50;certain_intents"/>
+        <rdfs:label xml:lang="en">way of doing intent</rdfs:label>
+        <rdfs:comment xml:lang="en">way of doing</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_intents_tsak"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#words_pf -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;words_pf">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_prompts"/>
+        <rdfs:comment xml:lang="en">lemmatized words for the group</rdfs:comment>
+        <relate_to_task rdf:resource="&untitled-ontology-50;define_name_groups_task"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;english_language"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;russian_language"/>
+        <relate_to_output rdf:resource="&untitled-ontology-50;show_name_groups_rep_template"/>
+        <relate_to_language rdf:resource="&untitled-ontology-50;ukrainian_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#words_res_f -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-50;words_res_f">
+        <rdf:type rdf:resource="&untitled-ontology-50;results_fields"/>
+        <rdfs:comment xml:lang="en">words</rdfs:comment>
+        <has_field_type rdf:resource="&untitled-ontology-50;text_field_ft"/>
+        <possible_values rdf:resource="&untitled-ontology-50;words_pf"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
