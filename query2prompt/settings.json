@@ -1,0 +1,12 @@
+{
+	"entry point": "http://localhost:3030/meta_ontology",
+	"ontology name": "http://www.semanticweb.org/zver/ontologies/2023/4/untitled-ontology-50#",
+    "output format": "JSON",
+	"several intents": true,
+	"intents probability": true,
+	"show intent subject": true,
+	"max intents number": 4,
+	"intents arrange": "by probability"	
+	
+	
+}
