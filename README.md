@@ -1,5 +1,13 @@
 # Data for "OntoChatGPT Information System: Ontology-Driven Structured Prompts For ChatGPT Meta-Learning" paper
 
+## How to cite
+
+Palagin, O., Kaverinskiy, V., Litvin, A., & Malakhov, K. (2023). OntoChatGPT Information System: Ontology-Driven Structured Prompts for ChatGPT Meta-Learning. International Journal of Computing, 22(2), 170-183. https://doi.org/10.47839/ijc.22.2.3086
+
+------
+
+
+
 | File                                   | Description                                                  |
 | -------------------------------------- | ------------------------------------------------------------ |
 | **./data/meta_ontology.owl**                  | OWL ontology which contains patterns of the structured JSON prompts for the chat GPT content and formation. |
